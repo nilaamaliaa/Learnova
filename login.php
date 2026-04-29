@@ -62,7 +62,7 @@
         </form>
 
         <p class="text-center mt-3 text-dark">
-          Belum punya akun? <a href="register.php">Daftar</a>
+          Belum punya ya? <a href="register.php">Daftar</a>
         </p>
       </div>
 
