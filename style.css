@@ -1,0 +1,9 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #ff9a9e, #fad0c4);
+}
+
+.card-custom {
+  border-radius: 20px;
+  box-shadow: 5px 5px 0px black;
+}

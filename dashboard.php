@@ -54,7 +54,6 @@ if (!isset($_SESSION['user'])) {
     .mapel-btn:hover {
       background: rgba(255,255,255,0.4);
     }
-
     .carousel-img {
     width: 100%;
     height: 400px;
