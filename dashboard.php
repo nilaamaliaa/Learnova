@@ -245,7 +245,7 @@ if (!isset($_SESSION['user'])) {
         <div class="d-flex align-items-center mt-3">
           <div class="avatar bg-green">A</div>
           <div class="ms-3">
-            <strong>Aldi Firmansyah</strong><br>
+            <strong>Aldo Firmansyah</strong><br>
             <small>Pelajar · Bandung</small>
           </div>
         </div>
