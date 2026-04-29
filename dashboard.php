@@ -11,6 +11,7 @@ if (!isset($_SESSION['user'])) {
 <head>
   <title>Dashboard</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
     body {
@@ -61,6 +62,17 @@ if (!isset($_SESSION['user'])) {
     object-position: center; /* fokus tengah */
     border-radius: 15px;
     }
+    .review-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1.5px solid rgba(255,255,255,0.8); /* ini border putih */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    }
+    .review-card:hover {
+    transform: translateY(-5px);
+    }
   </style>
 </head>
 
@@ -92,6 +104,13 @@ if (!isset($_SESSION['user'])) {
 <!-- CAROUSEL -->
 <div class="container mt-3">
   <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    </button>
     
     <div class="carousel-inner rounded shadow">
 
