@@ -40,7 +40,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark">
   <div class="container">
-    <span class="navbar-brand">Learnnova Academy</span>
+    <span class="navbar-brand">Learnova Academy</span>
     <a href="register.php" class="btn btn-pink">Register</a>
   </div>
 </nav>
