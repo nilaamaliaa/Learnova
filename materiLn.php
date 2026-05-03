@@ -125,30 +125,43 @@ if (!isset($_SESSION['user'])) {
     }
 
     /* STATS CARDS */
-    .stats-row {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 28px;
-      flex-wrap: wrap;
-    }
     .stat-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 12px;
-      padding: 14px 20px;
-      flex: 1;
-      min-width: 120px;
-      text-align: center;
-    }
-    .stat-card .stat-num {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-    .stat-card .stat-label {
-      font-size: 0.75rem;
-      opacity: 0.55;
-      margin-top: 2px;
-    }
+  border-radius: 14px;
+  padding: 16px 20px;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+/* warna beda tiap card */
+.stat-card:nth-child(1) {
+  background: linear-gradient(135deg, #FF4ECD, #C4008F);
+}
+
+.stat-card:nth-child(2) {
+  background: linear-gradient(135deg, #FFD966, #FFB300);
+  color: black;
+}
+
+.stat-card:nth-child(3) {
+  background: linear-gradient(135deg, #00C9A7, #008F7A);
+}
+
+.stats-row {
+  display: flex;
+  gap: 20px;          /* jarak antar card */
+  margin-bottom: 32px;
+  flex-wrap: nowrap;  /* PENTING: biar ga turun ke bawah */
+}
+
+/* hover biar ada feel */
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
 
     /* BAB LIST */
     .bab-btn {
