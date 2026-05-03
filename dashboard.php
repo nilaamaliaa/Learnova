@@ -91,8 +91,8 @@ if (!isset($_SESSION['user'])) {
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="materiLn.php">Materi</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Quiz</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Leaderboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="quiz.php">Quiz</a></li>
+        <li class="nav-item"><a class="nav-link" href="leaderboard.php">Leaderboard</a></li>
         <li class="nav-item">
           <a href="logout.php" class="btn btn-danger ms-2">Logout</a>
         </li>
