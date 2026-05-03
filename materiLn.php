@@ -390,27 +390,96 @@ if (!isset($_SESSION['user'])) {
 const materi = {
   10: {
     ipa: {
-      judul: "🔬 IPA", sub: "Ilmu Pengetahuan Alam · Kelas 10",
+      judul: "🔬 IPA", 
+      sub: "Ilmu Pengetahuan Alam · Kelas 10",
       bab: [
-        { judul: "Bab 1 – Hakikat Ilmu Sains", video: "VIDEO_ID", teks: `<h6>Apa itu Ilmu Sains?</h6><p>Sains mempelajari gejala alam melalui pengamatan dan eksperimen secara sistematis.</p><h6 class="mt-3">Metode Ilmiah</h6><ul><li>Merumuskan masalah</li><li>Membuat hipotesis</li><li>Melakukan eksperimen</li><li>Menganalisis data</li><li>Menarik kesimpulan</li></ul>` },
-        { judul: "Bab 2 – Besaran & Satuan", video: "VIDEO_ID", teks: `<h6>Besaran Pokok</h6><p>Besaran yang satuannya didefinisikan sendiri. Contoh: panjang (meter), massa (kg), waktu (sekon).</p><h6 class="mt-3">Besaran Turunan</h6><p>Diturunkan dari besaran pokok. Contoh: kecepatan (m/s), gaya (Newton).</p>` },
-        { judul: "Bab 3 – Sel Unit Kehidupan", video: "VIDEO_ID", teks: `<h6>Sel Prokariotik vs Eukariotik</h6><p>Prokariotik tidak memiliki membran inti (bakteri). Eukariotik memiliki membran inti (sel hewan & tumbuhan).</p><h6 class="mt-3">Organel Penting</h6><ul><li>Mitokondria – penghasil energi (ATP)</li><li>Ribosom – sintesis protein</li><li>Kloroplas – fotosintesis</li></ul>` },
+        { 
+            judul: "Gerak Lurus", 
+            video: "3YCRAse9irs", 
+            teks: 
+            `<h6>Masa Berburu & Meramu</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>`},
+        { 
+            judul: "Konfigurasi Elektron", 
+            video: "c6aQPwRnUw0", 
+            teks: 
+            `<h6>Masa Berburu & Meramu</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
+        { 
+            judul: "Gerak Melingkar", 
+            video: "PX57IZoUEvs", 
+            teks: 
+            `<h6>Masa Berburu & Meramu</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
+        { 
+            judul: "Momentum dan Impuls", 
+            video: "l6SVStydZT4", 
+            teks: 
+            `<h6>Masa Berburu & Meramu</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
+        { 
+            judul: "Momentum dan Impuls", 
+            video: "l6SVStydZT4", 
+            teks: 
+            `<h6>Masa Berburu & Meramu</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
+          
+        
+        
       ]
     },
     ips: {
-      judul: "🌍 IPS", sub: "Ilmu Pengetahuan Sosial · Kelas 10",
+      judul: "🌍 IPS", 
+      sub: "Ilmu Pengetahuan Sosial · Kelas 10",
       bab: [
-        { judul: "Bab 1 – Kondisi Geografis Indonesia", video: "VIDEO_ID", teks: `<h6>Letak Astronomis</h6><p>Indonesia terletak antara 6°LU–11°LS dan 95°BT–141°BT, beriklim tropis.</p><h6 class="mt-3">Letak Geografis</h6><p>Diapit dua benua (Asia & Australia) dan dua samudra (Hindia & Pasifik).</p>` },
+        { 
+            judul: "Bab 1 – Kondisi Geografis Indonesia", 
+            video: "VIDEO_ID", 
+            teks: `</p><h6 class="mt-3">Letak Geografis</h6><p>Diapit dua benua (Asia & Australia) dan dua samudra (Hindia & Pasifik).</p>` },
+
         { judul: "Bab 2 – Masa Praaksara", video: "VIDEO_ID", teks: `<h6>Masa Berburu & Meramu</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p><h6 class="mt-3">Masa Bercocok Tanam</h6><p>Mulai menetap dan membentuk komunitas. Mengenal gerabah & kapak persegi.</p>` },
         { judul: "Bab 3 – Interaksi Sosial", video: "VIDEO_ID", teks: `<h6>Bentuk Interaksi Sosial</h6><ul><li>Kerjasama – bekerja bersama mencapai tujuan</li><li>Persaingan – bersaing secara sehat</li><li>Konflik – pertentangan kepentingan</li><li>Akomodasi – penyelesaian konflik</li></ul>` },
       ]
     },
     mtk: {
-      judul: "📐 Matematika", sub: "Matematika · Kelas 10",
+      judul: "📐 Matematika", 
+      sub: "Matematika · Kelas 10",
       bab: [
-        { judul: "Bab 1 – Eksponen & Logaritma", video: "VIDEO_ID", teks: `<h6>Sifat Eksponen</h6><ul><li>aᵐ × aⁿ = aᵐ⁺ⁿ</li><li>aᵐ ÷ aⁿ = aᵐ⁻ⁿ</li><li>(aᵐ)ⁿ = aᵐⁿ</li><li>a⁰ = 1</li></ul><h6 class="mt-3">Logaritma</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
-        { judul: "Bab 2 – Persamaan Kuadrat", video: "VIDEO_ID", teks: `<h6>Bentuk Umum</h6><p>ax² + bx + c = 0, dengan a ≠ 0</p><h6 class="mt-3">Cara Menyelesaikan</h6><ul><li>Faktorisasi</li><li>Melengkapi kuadrat sempurna</li><li>Rumus abc: x = (−b ± √(b²−4ac)) / 2a</li></ul>` },
-        { judul: "Bab 3 – Fungsi Komposisi", video: "VIDEO_ID", teks: `<h6>Definisi Fungsi</h6><p>Relasi yang menghubungkan setiap anggota domain ke tepat satu anggota kodomain.</p><h6 class="mt-3">Komposisi</h6><p>(f∘g)(x) = f(g(x)) — g dikerjakan lebih dulu, lalu hasilnya masuk ke f.</p>` },
+        { 
+            judul: "Definisi dan Sifat Sifat Eksponen", 
+            video: "lScgN1qnirY", 
+            teks: `<p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+            judul: "Fungsi Eksponen", 
+            video: "fj4B6etl8zs", 
+            teks: `<p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+            judul: "Bentuk Akar", 
+            video: "GoYk9NBdkn4", 
+            teks: ` <p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+            judul: "Persamaan Logaritma", 
+            video: "ErOxc0WHu2M", 
+            teks: ` <p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+            judul: "Pertidaksamaan Logaritma", 
+            video: "CGSuMUfkAxQ", 
+            teks: ` <p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+            judul: "Deret Geometri", 
+            video: "PoUUNz6StSw", 
+            teks: ` <p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+            judul: "Konsep Dasar Vektor", 
+            video: "5jKGcT-JYtw", 
+            teks: ` <p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+            judul: "Mean", 
+            video: "XQ8UJAMJcUQ", 
+            teks: ` <p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+         { 
+            judul: "Modus", 
+            video: "1tQAn-wylgg", 
+            teks: ` <p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+         { 
+            judul: "Median", 
+            video: "9oP4zCpNOnY", 
+            teks: ` <p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
       ]
     },
     indo: {
