@@ -16,8 +16,23 @@ $username = $_SESSION['user'];
   <title>Quiz</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
-<body style="background:#1E1E2F; color:white;">
+<style>
+  body {
+      min-height: 100vh;
+      margin: 0;
+      padding-top: 55px;
+      color: white;
+      background-color: #44113E;
+      background-image:
+        radial-gradient(at 10% 10%, #FFF7AD 0%, transparent 50%),
+        radial-gradient(at 90% 15%, #FFB3AE 0%, transparent 50%),
+        radial-gradient(at 50% 50%, #FF49C1 0%, transparent 60%),
+        radial-gradient(at 20% 80%, #6A1452 0%, transparent 60%),
+        radial-gradient(at 80% 90%, #44113E 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+</style>
+<body>
 
 <div class="container mt-5">
 
