@@ -263,8 +263,8 @@ if (!isset($_SESSION['user'])) {
       <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item"><a class="nav-link" href="dashboard.php">Home</a></li>
         <li class="nav-item"><a class="nav-link active" href="materiLn.php">Materi</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Quiz</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Leaderboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="quiz.php">Quiz</a></li>
+        <li class="nav-item"><a class="nav-link" href="leaderboard.php">Leaderboard</a></li>
         <li class="nav-item"><a href="logout.php" class="btn btn-danger ms-2">Logout</a></li>
       </ul>
     </div>
@@ -675,12 +675,54 @@ const materi = {
   },
 
   12: {
-    ipa:     { judul: "🔬 IPA",             sub: "Ilmu Pengetahuan Alam · Kelas 12",   bab: [{ judul: "Bab 1 – Pertumbuhan & Perkembangan", video: "VIDEO_ID", teks: `<h6>Pertumbuhan</h6><p>Pertambahan ukuran yang bersifat kuantitatif dan irreversibel. Dipengaruhi faktor internal (gen, hormon) dan eksternal (cahaya, suhu, air).</p>` }, { judul: "Bab 2 – Metabolisme", video: "VIDEO_ID", teks: `<h6>Katabolisme</h6><p>Reaksi pemecahan molekul kompleks menjadi sederhana disertai pelepasan energi. Contoh: respirasi seluler.</p><h6 class="mt-3">Anabolisme</h6><p>Reaksi pembentukan molekul kompleks dari sederhana dengan memerlukan energi. Contoh: fotosintesis.</p>` }] },
-    ips:     { judul: "🌍 IPS",             sub: "Ilmu Pengetahuan Sosial · Kelas 12",  bab: [{ judul: "Bab 1 – Indonesia Masa Kemerdekaan", video: "VIDEO_ID", teks: `<h6>Proklamasi Kemerdekaan</h6><p>Diproklamasikan tanggal 17 Agustus 1945 oleh Soekarno-Hatta di Jakarta.</p><h6 class="mt-3">Sidang PPKI</h6><p>Mengesahkan UUD 1945 dan memilih presiden serta wakil presiden pertama.</p>` }, { judul: "Bab 2 – Orde Baru & Reformasi", video: "VIDEO_ID", teks: `<h6>Orde Baru (1966–1998)</h6><p>Dipimpin Soeharto. Fokus pada pembangunan ekonomi dengan stabilitas politik yang ketat.</p><h6 class="mt-3">Reformasi (1998–sekarang)</h6><p>Dimulai dengan pengunduran diri Soeharto. Terjadi demokratisasi dan desentralisasi pemerintahan.</p>` }] },
-    mtk:     { judul: "📐 Matematika",      sub: "Matematika · Kelas 12",              bab: [{ judul: "Bab 1 – Integral",              video: "VIDEO_ID", teks: `<h6>Integral Tak Tentu</h6><p>∫xⁿ dx = xⁿ⁺¹/(n+1) + C, untuk n ≠ −1</p><h6 class="mt-3">Integral Tertentu</h6><p>∫[a→b] f(x) dx = F(b) − F(a), di mana F adalah antiturunan f.</p>` }, { judul: "Bab 2 – Statistika", video: "VIDEO_ID", teks: `<h6>Ukuran Pemusatan</h6><ul><li>Mean – rata-rata nilai</li><li>Median – nilai tengah</li><li>Modus – nilai yang paling sering muncul</li></ul><h6 class="mt-3">Ukuran Penyebaran</h6><ul><li>Jangkauan = nilai maks − nilai min</li><li>Simpangan baku (standar deviasi)</li></ul>` }] },
-    indo:    { judul: "📝 Bahasa Indonesia", sub: "Bahasa Indonesia · Kelas 12",        bab: [{ judul: "Bab 1 – Teks Editorial",        video: "VIDEO_ID", teks: `<h6>Pengertian</h6><p>Teks yang berisi pendapat atau pandangan redaksi terhadap isu aktual yang berkembang di masyarakat.</p><h6 class="mt-3">Struktur</h6><ul><li>Pengenalan isu</li><li>Penyampaian pendapat</li><li>Penegasan ulang</li></ul>` }, { judul: "Bab 2 – Surat Lamaran Kerja", video: "VIDEO_ID", teks: `<h6>Komponen Surat</h6><ul><li>Tempat dan tanggal penulisan</li><li>Perihal dan lampiran</li><li>Alamat tujuan</li><li>Salam pembuka</li><li>Isi surat (pembuka, inti, penutup)</li><li>Salam penutup & tanda tangan</li></ul>` }] },
-    inggris: { judul: "💬 Bahasa Inggris",  sub: "Bahasa Inggris · Kelas 12",           bab: [{ judul: "Bab 1 – Reported Speech",       video: "VIDEO_ID", teks: `<h6>Direct vs Indirect Speech</h6><p>Direct: She said, "I am happy."<br>Indirect: She said that she was happy.</p><h6 class="mt-3">Perubahan Tense</h6><ul><li>Simple present → Simple past</li><li>Present continuous → Past continuous</li><li>Will → Would</li></ul>` }, { judul: "Bab 2 – Argumentative Essay", video: "VIDEO_ID", teks: `<h6>Structure</h6><ul><li>Introduction – background & thesis statement</li><li>Body Paragraph 1 – argument + evidence</li><li>Body Paragraph 2 – argument + evidence</li><li>Counter-argument – opposing view + rebuttal</li><li>Conclusion – restate thesis & closing</li></ul>` }] },
-  }
+    ipa:   { 
+      judul: "🔬 IPA", sub: "Ilmu Pengetahuan Alam · Kelas 11",   
+      bab: [
+        { 
+          judul: "Bab 1 – Sel & Jaringan",        
+          video: "VIDEO_ID", 
+          teks: `<h6>Jaringan Tumbuhan</h6><p>Terdiri dari jaringan meristem dan jaringan permanen (epidermis, parenkim, kolenkim, sklerenkim).</p>` }, 
+
+        ] 
+      },
+    ips:     { 
+      judul: "🌍 IPS", sub: "Ilmu Pengetahuan Sosial · Kelas 11",  
+      bab: [
+        { 
+          judul: "Bab 1 – Kerajaan Hindu-Buddha", 
+          video: "VIDEO_ID", 
+          teks: `<h6>Kerajaan Kutai</h6><p>Kerajaan Hindu tertua di Indonesia, berdiri sekitar abad ke-4 M di Kalimantan Timur.</p>` }, 
+          
+       ] 
+      },
+    mtk:     { 
+      judul: "📐 Matematika", sub: "Matematika · Kelas 11",
+      bab: [
+        { 
+          judul: "Bab 1 – Limit Fungsi",          
+          video: "VIDEO_ID", 
+          teks: `<h6>Pengertian Limit</h6><p>Limit fungsi f(x) saat x mendekati a adalah nilai yang didekati f(x) ketika x semakin dekat ke a.</p>` }, 
+       ] 
+     },
+    indo:    { 
+      judul: "📝 Bahasa Indonesia", sub: "Bahasa Indonesia · Kelas 11",        
+      bab: [
+        { 
+          judul: "Bab 1 – Teks Prosedur",         
+          video: "VIDEO_ID", 
+          teks: `<h6>Struktur</h6><p>Limit fungsi f(x) saat x mendekati a adalah nilai yang didekati f(x) ketika x semakin dekat ke a.</p>` }, 
+      ] 
+    },
+    inggris: { 
+      judul: "💬 Bahasa Inggris",  sub: "Bahasa Inggris · Kelas 11",           
+      bab: [
+        { 
+          judul: "Bab 1 – Passive Voice",         
+          video: "VIDEO_ID", 
+          teks: `<h6>Formula</h6><p>Limit fungsi f(x) saat x mendekati a adalah nilai yang didekati f(x) ketika x semakin dekat ke a.</p>` }, 
+      ] 
+    },
+  },
 };
 
 let kelasAktif = 10;
