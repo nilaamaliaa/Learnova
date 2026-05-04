@@ -620,17 +620,58 @@ const materi = {
           judul: "Analytical Exposition", 
           video: "-A3xhBuO8UQg", 
           teks: `<h6>Analytical Exposition</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
-        
       ]
     },
   },
 
   11: {
-    ipa:     { judul: "🔬 IPA",             sub: "Ilmu Pengetahuan Alam · Kelas 11",   bab: [{ judul: "Bab 1 – Sel & Jaringan",        video: "VIDEO_ID", teks: `<h6>Jaringan Tumbuhan</h6><p>Terdiri dari jaringan meristem dan jaringan permanen (epidermis, parenkim, kolenkim, sklerenkim).</p><h6 class="mt-3">Jaringan Hewan</h6><p>Meliputi jaringan epitel, otot, saraf, dan ikat.</p>` }, { judul: "Bab 2 – Sistem Gerak", video: "VIDEO_ID", teks: `<h6>Tulang</h6><p>Fungsi tulang: penyangga tubuh, perlindungan organ, tempat melekatnya otot.</p><h6 class="mt-3">Sendi & Otot</h6><p>Sendi menghubungkan antar tulang. Otot menghasilkan gerakan melalui kontraksi dan relaksasi.</p>` }] },
-    ips:     { judul: "🌍 IPS",             sub: "Ilmu Pengetahuan Sosial · Kelas 11",  bab: [{ judul: "Bab 1 – Kerajaan Hindu-Buddha", video: "VIDEO_ID", teks: `<h6>Kerajaan Kutai</h6><p>Kerajaan Hindu tertua di Indonesia, berdiri sekitar abad ke-4 M di Kalimantan Timur.</p><h6 class="mt-3">Kerajaan Majapahit</h6><p>Kerajaan Hindu-Buddha terbesar di Nusantara, berdiri tahun 1293 M.</p>` }, { judul: "Bab 2 – Kerajaan Islam", video: "VIDEO_ID", teks: `<h6>Samudera Pasai</h6><p>Kerajaan Islam pertama di Indonesia, berdiri di Aceh sekitar abad ke-13 M.</p><h6 class="mt-3">Kesultanan Demak</h6><p>Kerajaan Islam pertama di Pulau Jawa, didirikan oleh Raden Patah.</p>` }] },
-    mtk:     { judul: "📐 Matematika",      sub: "Matematika · Kelas 11",              bab: [{ judul: "Bab 1 – Limit Fungsi",          video: "VIDEO_ID", teks: `<h6>Pengertian Limit</h6><p>Limit fungsi f(x) saat x mendekati a adalah nilai yang didekati f(x) ketika x semakin dekat ke a.</p><h6 class="mt-3">Sifat-sifat Limit</h6><ul><li>lim [f(x) ± g(x)] = lim f(x) ± lim g(x)</li><li>lim [f(x) × g(x)] = lim f(x) × lim g(x)</li></ul>` }, { judul: "Bab 2 – Turunan Fungsi", video: "VIDEO_ID", teks: `<h6>Definisi Turunan</h6><p>f'(x) = lim [f(x+h) – f(x)] / h saat h → 0</p><h6 class="mt-3">Rumus Turunan</h6><ul><li>d/dx (xⁿ) = n·xⁿ⁻¹</li><li>d/dx (sin x) = cos x</li><li>d/dx (cos x) = −sin x</li></ul>` }] },
-    indo:    { judul: "📝 Bahasa Indonesia", sub: "Bahasa Indonesia · Kelas 11",        bab: [{ judul: "Bab 1 – Teks Prosedur",         video: "VIDEO_ID", teks: `<h6>Struktur</h6><ul><li>Tujuan – hasil akhir yang ingin dicapai</li><li>Material – bahan/alat yang dibutuhkan</li><li>Langkah-langkah – urutan cara melakukan</li></ul>` }, { judul: "Bab 2 – Teks Eksplanasi", video: "VIDEO_ID", teks: `<h6>Pengertian</h6><p>Teks yang menjelaskan proses terjadinya suatu fenomena alam atau sosial.</p><h6 class="mt-3">Struktur</h6><ul><li>Pernyataan umum</li><li>Deretan penjelas</li><li>Interpretasi</li></ul>` }] },
-    inggris: { judul: "💬 Bahasa Inggris",  sub: "Bahasa Inggris · Kelas 11",           bab: [{ judul: "Bab 1 – Passive Voice",         video: "VIDEO_ID", teks: `<h6>Formula</h6><ul><li>Active: S + V + O</li><li>Passive: S + to be + V3 + (by agent)</li></ul><h6 class="mt-3">Example</h6><ul><li>Active: She writes a letter.</li><li>Passive: A letter is written by her.</li></ul>` }, { judul: "Bab 2 – Conditional Sentence", video: "VIDEO_ID", teks: `<h6>Type 1 – Real Condition</h6><p>If + Simple Present, will + V1. Contoh: If it rains, I will stay home.</p><h6 class="mt-3">Type 2 – Unreal Present</h6><p>If + Simple Past, would + V1. Contoh: If I were rich, I would travel the world.</p>` }] },
+    ipa:   { 
+      judul: "🔬 IPA", sub: "Ilmu Pengetahuan Alam · Kelas 11",   
+      bab: [
+        { 
+          judul: "Bab 1 – Sel & Jaringan",        
+          video: "VIDEO_ID", 
+          teks: `<h6>Jaringan Tumbuhan</h6><p>Terdiri dari jaringan meristem dan jaringan permanen (epidermis, parenkim, kolenkim, sklerenkim).</p>` }, 
+
+        ] 
+      },
+    ips:     { 
+      judul: "🌍 IPS", sub: "Ilmu Pengetahuan Sosial · Kelas 11",  
+      bab: [
+        { 
+          judul: "Bab 1 – Kerajaan Hindu-Buddha", 
+          video: "VIDEO_ID", 
+          teks: `<h6>Kerajaan Kutai</h6><p>Kerajaan Hindu tertua di Indonesia, berdiri sekitar abad ke-4 M di Kalimantan Timur.</p>` }, 
+          
+       ] 
+      },
+    mtk:     { 
+      judul: "📐 Matematika", sub: "Matematika · Kelas 11",
+      bab: [
+        { 
+          judul: "Bab 1 – Limit Fungsi",          
+          video: "VIDEO_ID", 
+          teks: `<h6>Pengertian Limit</h6><p>Limit fungsi f(x) saat x mendekati a adalah nilai yang didekati f(x) ketika x semakin dekat ke a.</p>` }, 
+       ] 
+     },
+    indo:    { 
+      judul: "📝 Bahasa Indonesia", sub: "Bahasa Indonesia · Kelas 11",        
+      bab: [
+        { 
+          judul: "Bab 1 – Teks Prosedur",         
+          video: "VIDEO_ID", 
+          teks: `<h6>Struktur</h6><p>Limit fungsi f(x) saat x mendekati a adalah nilai yang didekati f(x) ketika x semakin dekat ke a.</p>` }, 
+      ] 
+    },
+    inggris: { 
+      judul: "💬 Bahasa Inggris",  sub: "Bahasa Inggris · Kelas 11",           
+      bab: [
+        { 
+          judul: "Bab 1 – Passive Voice",         
+          video: "VIDEO_ID", 
+          teks: `<h6>Formula</h6><p>Limit fungsi f(x) saat x mendekati a adalah nilai yang didekati f(x) ketika x semakin dekat ke a.</p>` }, 
+      ] 
+    },
   },
 
   12: {
