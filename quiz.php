@@ -31,14 +31,44 @@ $username = $_SESSION['user'];
         radial-gradient(at 80% 90%, #44113E 0%, transparent 50%);
       background-attachment: fixed;
     }
+
+ .navbar {
+      background: rgba(0,0,0,0.3) !important;
+      backdrop-filter: blur(10px);
+    }
+
+  .card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
 </style>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.php">Learnnova</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="dashboard.php">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="materiLn.php">Materi</a></li>
+        <li class="nav-item"><a class="nav-link active" href="quiz.php">Quiz</a></li>
+        <li class="nav-item"><a class="nav-link" href="leaderboard.php">Leaderboard</a></li>
+        <li class="nav-item"><a href="logout.php" class="btn btn-danger ms-2">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <div class="container mt-5">
 
 <div class="card p-4 shadow">
-  <h5 class="text-dark">Soal:</h5>
-  <p class="text-dark">2 + 2 = ?</p>
+  <h5 class="text-white">Soal:</h5>
+  <p class="text-white">2 + 2 = ?</p>
 
   <form method="POST">
     <button name="jawab" value="a" class="btn btn-outline-danger w-100 mb-2">3</button>
