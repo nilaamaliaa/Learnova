@@ -580,8 +580,47 @@ const materi = {
     inggris: {
       judul: "💬 Bahasa Inggris", sub: "Bahasa Inggris · Kelas 10",
       bab: [
-        { judul: "Bab 1 – Simple Present Tense", video: "VIDEO_ID", teks: `<h6>Usage</h6><p>Used for habits, general truths, and scheduled events.</p><h6 class="mt-3">Formula</h6><ul><li>Positive: S + V1(s/es) + Object</li><li>Negative: S + do/does + not + V1</li><li>Question: Do/Does + S + V1?</li></ul>` },
-        { judul: "Bab 2 – Descriptive Text", video: "VIDEO_ID", teks: `<h6>Purpose</h6><p>To describe a specific person, place, animal, or thing in vivid detail.</p><h6 class="mt-3">Generic Structure</h6><ul><li>Identification – introduces the subject</li><li>Description – describes features & qualities</li></ul>` },
+        { 
+          judul: "Descriptive Text", 
+          video: "Fdl8WLeTy3o", 
+          teks: `<h6>Descriptive Text</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+          judul: "Poster, Banner, Pamphlet and Brochure", 
+          video: "BuEmHCpGUAw", 
+          teks: `<h6>Poster, Banner, Pamphlet and Brochure</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+          judul: "Recount Text", 
+          video: "zGRZlDudZtI", 
+          teks: `<h6>Recount Text</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+          judul: "Narrative Text", 
+          video: "GRQm4x6GtAo", 
+          teks: `<h6>Narrative Text</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+          judul: "Reported Speech", 
+          video: "cpRz1MPSV0Q", 
+          teks: `<h6>Reported Speech</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+          judul: "Introducing Oneself and Others", 
+          video: "IQDPx8FFexI", 
+          teks: `<h6>Introducing Oneself and Others</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+          judul: "Hortatory Exposition", 
+          video: "NQgATZ2tJqU", 
+          teks: `<h6>Hortatory Exposition</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+          judul: "Announcement", 
+          video: "M0lGABTY63s", 
+          teks: `<h6>Announcement</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+          judul: "Report Text", 
+          video: "-gBZCCOac8w", 
+          teks: `<h6>Report Text</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+          judul: "Analytical Exposition", 
+          video: "-A3xhBuO8UQg", 
+          teks: `<h6>Analytical Exposition</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        
       ]
     },
   },
