@@ -591,7 +591,7 @@ const materi = {
         { 
           judul: "Recount Text", 
           video: "zGRZlDudZtI", 
-          teks: `<h6>Recount Text</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+          teks: `<h6>Recount Text</h6><p></p>` },
         { 
           judul: "Narrative Text", 
           video: "GRQm4x6GtAo", 
