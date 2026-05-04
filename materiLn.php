@@ -555,8 +555,26 @@ const materi = {
     indo: {
       judul: "📝 Bahasa Indonesia", sub: "Bahasa Indonesia · Kelas 10",
       bab: [
-        { judul: "Bab 1 – Teks Laporan Observasi", video: "VIDEO_ID", teks: `<h6>Struktur</h6><ul><li>Pernyataan umum – gambaran umum objek</li><li>Deskripsi bagian – rincian aspek objek</li><li>Deskripsi manfaat – kegunaan objek</li></ul><h6 class="mt-3">Ciri Kebahasaan</h6><ul><li>Kata benda dominan</li><li>Kalimat definisi menggunakan "adalah" / "merupakan"</li></ul>` },
-        { judul: "Bab 2 – Teks Anekdot", video: "VIDEO_ID", teks: `<h6>Pengertian</h6><p>Cerita singkat lucu yang mengandung kritik sosial atau pesan moral.</p><h6 class="mt-3">Struktur</h6><ul><li>Abstrak – gambaran isi</li><li>Orientasi – latar cerita</li><li>Krisis – masalah/konflik</li><li>Reaksi – penyelesaian</li><li>Koda – penutup/pelajaran</li></ul>` },
+        { 
+          judul: "Teks Laporan Hasil Observasi", 
+          video: "On2mvtL5U5k", 
+          teks: `<h6>Teks Laporan Hasil Observasi</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+          judul: "Teks Editorial", 
+          video: "On2DF22wOmesBA", 
+          teks: `<h6>Teks Editorial</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+          judul: "Laporan Hasil Observasi", 
+          video: "t-utIU_UAiI", 
+          teks: `<h6>Laporan Hasil Observasi</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+          judul: "Teks Hikayat", 
+          video: "Y4YnzVxywU0", 
+          teks: `<h6>Teks Hikayat</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
+        { 
+          judul: "Teks Negosiasi", 
+          video: "etGTCRh1w08", 
+          teks: `<h6>Teks Negosiasi</h6><p>Kebalikan dari eksponen. ᵃlog b = c artinya aᶜ = b</p>` },
       ]
     },
     inggris: {
