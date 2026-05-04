@@ -37,15 +37,9 @@ $username = $_SESSION['user'];
       backdrop-filter: blur(10px);
     }
 
-  .card {
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
-      border-radius: 15px;
-      color: white;
-      border: 1px solid rgba(255,255,255,0.15);
-    }
 </style>
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="index.php">Learnnova</a>
@@ -67,8 +61,8 @@ $username = $_SESSION['user'];
 <div class="container mt-5">
 
 <div class="card p-4 shadow">
-  <h5 class="text-white">Soal:</h5>
-  <p class="text-white">2 + 2 = ?</p>
+  <h5 class="text-dark">Soal:</h5>
+  <p class="text-dark">2 + 2 = ?</p>
 
   <form method="POST">
     <button name="jawab" value="a" class="btn btn-outline-danger w-100 mb-2">3</button>
