@@ -397,27 +397,52 @@ const materi = {
             judul: "Gerak Lurus", 
             video: "3YCRAse9irs", 
             teks: 
-            `<h6>Masa Berburu & Meramu</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>`},
+            `<h6> Gerak Lurus </h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>`},
         { 
             judul: "Konfigurasi Elektron", 
             video: "c6aQPwRnUw0", 
             teks: 
-            `<h6>Masa Berburu & Meramu</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
+            `<h6>Konfigurasi Elektron</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
         { 
             judul: "Gerak Melingkar", 
             video: "PX57IZoUEvs", 
             teks: 
-            `<h6>Masa Berburu & Meramu</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
+            `<h6>Gerak Melingkar</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
         { 
             judul: "Momentum dan Impuls", 
             video: "l6SVStydZT4", 
             teks: 
-            `<h6>Masa Berburu & Meramu</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
+            `<h6>Momentum dan Impuls</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
         { 
-            judul: "Momentum dan Impuls", 
-            video: "l6SVStydZT4", 
+            judul: "Virus", 
+            video: "8glI_X1XoBE", 
             teks: 
-            `<h6>Masa Berburu & Meramu</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
+            `<h6>Virus</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
+        { 
+            judul: "Efek Rumah Kaca dan Pemanasan Global", 
+            video: "pVjXm340tbw", 
+            teks: 
+            `<h6>Efek Rumah Kaca dan Pemanasan Global</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
+         { 
+            judul: "Perubahan Lingkungan", 
+            video: "abfIbM4hWIk", 
+            teks: 
+            `<h6>Perubahan Lingkungan</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
+        { 
+            judul: "Reaksi Kimia", 
+            video: "YRZb_hmonsU", 
+            teks: 
+            `<h6>Reaksi Kimia</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
+        { 
+            judul: "Unsur, Senyawa, Campuran", 
+            video: "qEnCeg07C-c", 
+            teks: 
+            `<h6>Unsur, Senyawa, Campuran</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
+        { 
+            judul: "Besaran, Satuan dan Dimensi", 
+            video: "xefe-f5GxBI", 
+            teks: 
+            `<h6>Besaran, Satuan dan Dimensi</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p>` },
           
         
         
@@ -428,12 +453,57 @@ const materi = {
       sub: "Ilmu Pengetahuan Sosial · Kelas 10",
       bab: [
         { 
-            judul: "Bab 1 – Kondisi Geografis Indonesia", 
-            video: "VIDEO_ID", 
-            teks: `</p><h6 class="mt-3">Letak Geografis</h6><p>Diapit dua benua (Asia & Australia) dan dua samudra (Hindia & Pasifik).</p>` },
+            judul: "Pengantar Ilmu Sejarah", 
+            video: "gDVm1ncqTBU", 
+            teks: 
+            `<h6>Pengantar Ilmu Sejarah</h6><p>Diapit dua benua (Asia & Australia) dan dua samudra (Hindia & Pasifik).</p>` },
+        { 
+            judul: "Penelitian Sejarah", 
+            video: "JLxJtMe1ycg", 
+            teks: 
+            `<h6>Penelitian Sejarah</h6><p>Diapit dua benua (Asia & Australia) dan dua samudra (Hindia & Pasifik).</p>` },
+        { 
+            judul: "Teori Asal Usul Nenek Moyang Indonesia", 
+            video: "dgFLraT6wQg", 
+            teks: 
+            `<h6>Teori Asal Usul Nenek Moyang Indonesia</h6><p>Diapit dua benua (Asia & Australia) dan dua samudra (Hindia & Pasifik).</p>` },
+        { 
+            judul: "Mengenal Jejak Manusia Purba", 
+            video: "hPN1CelBRGw", 
+            teks: 
+            `<h6>Mengenal Jejak Manusia Purba</h6><p>Diapit dua benua (Asia & Australia) dan dua samudra (Hindia & Pasifik).</p>` },
+        { 
+            judul: "Masuknya Agama dan Kebudayaan Hindu Budha di Indonesia", 
+            video: "Qg3_Ef9uI9w", 
+            teks: 
+            `<h6>Masuknya Agama dan Kebudayaan Hindu Budha di Indonesia</h6><p>Diapit dua benua (Asia & Australia) dan dua samudra (Hindia & Pasifik).</p>` },
+        { 
+            judul: "Pengaruh Hindu dan Budha di Kehidupan Masa Kini", 
+            video: "Bom8yxCo9Ww", 
+            teks: 
+            `<h6>Pengaruh Hindu dan Budha di Kehidupan Masa Kini</h6><p>Diapit dua benua (Asia & Australia) dan dua samudra (Hindia & Pasifik).</p>` },
+        { 
+            judul: "Teori Masuknya Islam ke Indonesia ", 
+            video: "SJGglOpNj9g", 
+            teks: 
+            `<h6>Teori Masuknya Islam ke Indonesia </h6><p>Diapit dua benua (Asia & Australia) dan dua samudra (Hindia & Pasifik).</p>` },
+        { 
+            judul: "Pengaruh Agama Islam di Masa Kini", 
+            video: "W05BbZTGJpg", 
+            teks: 
+            `<h6>Pengaruh Agama Islam di Masa Kini</h6><p>Diapit dua benua (Asia & Australia) dan dua samudra (Hindia & Pasifik).</p>` },
+        { 
+            judul: "Pengaruh Hasil dan Nilai Budaya Praaksara di Zaman Sekarang", 
+            video: "15PXIlPR4To", 
+            teks: 
+            `<h6>Pengaruh Hasil dan Nilai Budaya Praaksara di Zaman Sekarang</h6><p>Diapit dua benua (Asia & Australia) dan dua samudra (Hindia & Pasifik).</p>` },
+        { 
+            judul: "Corak Kehidupan Manusia Masa Praaksara ", 
+            video: "y_E6IqOEtJc", 
+            teks: 
+            `<h6>Corak Kehidupan Manusia Masa Praaksara </h6><p>Diapit dua benua (Asia & Australia) dan dua samudra (Hindia & Pasifik).</p>` },
 
-        { judul: "Bab 2 – Masa Praaksara", video: "VIDEO_ID", teks: `<h6>Masa Berburu & Meramu</h6><p>Manusia purba hidup nomaden. Menggunakan alat batu sederhana.</p><h6 class="mt-3">Masa Bercocok Tanam</h6><p>Mulai menetap dan membentuk komunitas. Mengenal gerabah & kapak persegi.</p>` },
-        { judul: "Bab 3 – Interaksi Sosial", video: "VIDEO_ID", teks: `<h6>Bentuk Interaksi Sosial</h6><ul><li>Kerjasama – bekerja bersama mencapai tujuan</li><li>Persaingan – bersaing secara sehat</li><li>Konflik – pertentangan kepentingan</li><li>Akomodasi – penyelesaian konflik</li></ul>` },
+        
       ]
     },
     mtk: {
