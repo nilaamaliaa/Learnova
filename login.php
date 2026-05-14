@@ -7,6 +7,7 @@
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <style>
     body {
@@ -32,6 +33,10 @@
     .btn-pink:hover {
       background-color: #e043b8;
     }
+    .logo{
+      height: 40px;
+      object-fit: contain;
+    }
   </style>
 </head>
 
@@ -40,8 +45,19 @@
 <!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark">
   <div class="container">
-    <span class="navbar-brand">Learnova Academy</span>
-    <a href="register.php" class="btn btn-pink">Register</a>
+
+    <!-- LOGO -->
+    <a href="index.php" class="navbar-brand">
+      <img src="logoLearnnova.png" 
+           alt="Learnova Academy" 
+           class="logo">
+    </a>
+
+    <!-- BUTTON -->
+    <a href="register.php" class="btn btn-pink">
+      Register
+    </a>
+
   </div>
 </nav>
 

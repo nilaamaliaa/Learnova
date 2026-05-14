@@ -1,16 +1,26 @@
 <?php
 session_start();
-if (!isset($_SESSION['user'])) {
-    header("Location: login.php");
-    exit();
-}
-?>
+if(!isset($_SESSION['user'])) header("Location: login.php");
+include 'koneksi.php';
+
+$mapel = $_GET['mapel'] ?? 'mtk';
+$kelas = $_GET['kelas'] ?? '10';
+$bab = $_GET['bab'] ?? 'eksponen';
+
+// DATA MATERI (manual, ngikutin modul)
+$video = [
+    'mtk' => ['eksponen' => 'lScgN1qnirY', 'logaritma' => 'ErOxc0WHu2M'],
+    'fisika' => ['geraklurus' => '3YCRAse9irs'],
+];
+$videoId = $video[$mapel][$bab] ?? '';
+?> 
 
 <!DOCTYPE html>
 <html>
 <head>
   <title>Materi – Learnnova</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
@@ -20,6 +30,7 @@ if (!isset($_SESSION['user'])) {
       padding-top: 55px;
       color: white;
       background-color: #44113E;
+      font-family: Arial, sans-serif;
       background-image:
         radial-gradient(at 10% 10%, #FFF7AD 0%, transparent 50%),
         radial-gradient(at 90% 15%, #FFB3AE 0%, transparent 50%),
@@ -246,7 +257,15 @@ if (!isset($_SESSION['user'])) {
     }
     .tip-card .tip-icon { font-size: 1.5rem; margin-bottom: 8px; display: block; }
     .tip-card strong { display: block; margin-bottom: 4px; }
-    .tip-card span { opacity: 0.55; font-size: 0.78rem; }
+    .tip-card span { opacity: 0.55; font-size: 0.78rem; 
+    }
+     /* BUTTON QUIZ */
+    .btn-success {
+    transition: 0.3s;
+    }
+    .btn-success:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 
@@ -254,8 +273,8 @@ if (!isset($_SESSION['user'])) {
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.php">Learnnova</a>
+  <div class="container mt-1">
+    <a class="navbar-brand fw-bold" href="dashboard.php">Learnnova</a>
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -275,7 +294,7 @@ if (!isset($_SESSION['user'])) {
 
   <!-- HERO -->
   <div class="hero-section">
-    <h1>📚 Materi Pelajaran</h1>
+    <h1>Materi Pelajaran</h1>
     <p>Pilih kelas dan mata pelajaran untuk mulai belajar</p>
   </div>
 
@@ -299,7 +318,7 @@ if (!isset($_SESSION['user'])) {
         <div class="stat-label">Total Bab</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">🔥 5</div>
+        <div class="stat-num">5</div>
         <div class="stat-label">Streak Hari</div>
       </div>
     </div>
@@ -307,20 +326,31 @@ if (!isset($_SESSION['user'])) {
 
   <!-- MAPEL BUTTONS (besar, tengah) -->
   <div class="mapel-grid" id="mapelGrid">
-    <button class="mapel-btn" onclick="showMapel('ipa', this)">
-      <span class="mapel-emoji">🔬</span>IPA
+    <button class="mapel-btn"
+onclick="showMapel('ipa', this)">
+      <i class="bi bi-brightness-high"></i><br>
+      IPA
     </button>
-    <button class="mapel-btn" onclick="showMapel('ips', this)">
-      <span class="mapel-emoji">🌍</span>IPS
+    <button class="mapel-btn"
+onclick="showMapel('ips', this)">
+       <i class="bi bi-globe"></i><br>
+        IPS
     </button>
-    <button class="mapel-btn" onclick="showMapel('mtk', this)">
-      <span class="mapel-emoji">📐</span>Matematika
+    
+    <button class="mapel-btn"
+onclick="showMapel('mtk', this)">
+      <i class="bi bi-calculator"></i><br>
+      Matematika
     </button>
-    <button class="mapel-btn" onclick="showMapel('indo', this)">
-      <span class="mapel-emoji">📝</span>Bahasa Indonesia
+    <button class="mapel-btn"
+onclick="showMapel('indo', this)">
+      <i class="bi bi-book"></i><br>
+      Bahasa Indonesia
     </button>
-    <button class="mapel-btn" onclick="showMapel('inggris', this)">
-      <span class="mapel-emoji">💬</span>Bahasa Inggris
+    <button class="mapel-btn"
+onclick="showMapel('inggris', this)">
+      <i class="bi bi-translate"></i><br>
+      Bahasa Inggris
     </button>
   </div>
 
@@ -341,7 +371,7 @@ if (!isset($_SESSION['user'])) {
 
       <!-- Info banner -->
       <div class="info-banner" id="infoBanner" style="display:none">
-        <span style="font-size:1.5rem">📖</span>
+        <span style="font-size:1.5rem"></span>
         <div class="info-text">
           <strong id="bannerJudul">—</strong>
           <span id="bannerSub">—</span>
@@ -351,7 +381,7 @@ if (!isset($_SESSION['user'])) {
       <div id="kontenBab">
         <!-- EMPTY STATE (besar, bukan card) -->
         <div class="empty-state">
-          <span class="empty-emoji">👈</span>
+          <i class="bi bi-journal-text"></i>
           <h3>Pilih bab untuk mulai belajar</h3>
           <p>Klik salah satu bab di sebelah kiri</p>
         </div>
@@ -359,7 +389,7 @@ if (!isset($_SESSION['user'])) {
         <!-- TIP CARDS saat belum pilih bab -->
         <div class="tip-grid" id="tipGrid">
           <div class="tip-card">
-            <span class="tip-icon">🎯</span>
+            <span class="tip-icon"></span>
             <strong>Belajar Fokus</strong>
             <span>Selesaikan satu bab sebelum lanjut ke bab berikutnya</span>
           </div>
@@ -369,12 +399,12 @@ if (!isset($_SESSION['user'])) {
             <span>Video penjelasan tersedia di setiap bab materi</span>
           </div>
           <div class="tip-card">
-            <span class="tip-icon">✍️</span>
+            <span class="tip-icon"></span>
             <strong>Catat Poin Penting</strong>
             <span>Tulis ringkasan materi agar lebih mudah diingat</span>
           </div>
           <div class="tip-card">
-            <span class="tip-icon">🏆</span>
+            <span class="tip-icon"></span>
             <strong>Kerjakan Quiz</strong>
             <span>Uji pemahaman kamu dengan quiz setelah belajar</span>
           </div>
@@ -390,7 +420,7 @@ if (!isset($_SESSION['user'])) {
 const materi = {
   10: {
     ipa: {
-      judul: "🔬 IPA", 
+      judul: '<i class="bi bi-brightness-high"></i> IPA', 
       sub: "Ilmu Pengetahuan Alam · Kelas 10",
       bab: [
         { 
@@ -449,7 +479,7 @@ const materi = {
       ]
     },
     ips: {
-      judul: "🌍 IPS", 
+      judul: '<i class="bi bi-globe"></i> IPS', 
       sub: "Ilmu Pengetahuan Sosial · Kelas 10",
       bab: [
         { 
@@ -507,7 +537,7 @@ const materi = {
       ]
     },
     mtk: {
-      judul: "📐 Matematika", 
+      judul: '<i class="bi bi-calculator"></i> Matematika', 
       sub: "Matematika · Kelas 10",
       bab: [
         { 
@@ -553,7 +583,7 @@ const materi = {
       ]
     },
     indo: {
-      judul: "📝 Bahasa Indonesia", sub: "Bahasa Indonesia · Kelas 10",
+      judul: '<i class="bi bi-translate"></i> Bahasa Indonesia', sub: "Bahasa Indonesia · Kelas 10",
       bab: [
         { 
           judul: "Teks Laporan Hasil Observasi", 
@@ -590,7 +620,7 @@ const materi = {
       ]
     },
     inggris: {
-      judul: "💬 Bahasa Inggris", sub: "Bahasa Inggris · Kelas 10",
+      judul: '<i class="bi bi-translate"></i> Bahasa Inggris', sub: "Bahasa Inggris · Kelas 10",
       bab: [
         { 
           judul: "Descriptive Text", 
@@ -638,7 +668,7 @@ const materi = {
 
   11: {
     ipa:   { 
-      judul: "🔬 IPA", sub: "Ilmu Pengetahuan Alam · Kelas 11",   
+      judul: '<i class="bi bi-brightness-high"></i> IPA', sub: "Ilmu Pengetahuan Alam · Kelas 11",
       bab: [
         { 
           judul: "Sejarah Penemuan dan Komponen Penyusunan Sel ",        
@@ -683,7 +713,7 @@ const materi = {
         ] 
       },
     ips:     { 
-      judul: "🌍 IPS", sub: "Ilmu Pengetahuan Sosial · Kelas 11",  
+      judul: '<i class="bi bi-globe"></i> IPS', sub: "Ilmu Pengetahuan Sosial · Kelas 11",  
       bab: [
         { 
           judul: "Harmoni Sosial dan Integrasi Sosial ", 
@@ -728,7 +758,7 @@ const materi = {
        ] 
       },
     mtk:     { 
-      judul: "📐 Matematika", sub: "Matematika · Kelas 11",
+      judul: '<i class="bi bi-calculator"></i> Matematika', sub: "Matematika · Kelas 11",
       bab: [
         { 
           judul: "Operasi Aljabar Polinomial ",          
@@ -773,7 +803,7 @@ const materi = {
        ] 
      },
     indo:    { 
-      judul: "📝 Bahasa Indonesia", sub: "Bahasa Indonesia · Kelas 11",        
+      judul: '<i class="bi bi-translate"></i> Bahasa Indonesia', sub: "Bahasa Indonesia · Kelas 11",        
       bab: [
         { 
           judul: "Teks Cerita Pendek ",         
@@ -806,7 +836,7 @@ const materi = {
       ] 
     },
     inggris: { 
-      judul: "💬 Bahasa Inggris",  sub: "Bahasa Inggris · Kelas 11",           
+      judul: '<i class="bi bi-translate"></i> Bahasa Inggris',  sub: "Bahasa Inggris · Kelas 11",           
       bab: [
         { 
           judul: "Personal Letter",         
@@ -854,7 +884,7 @@ const materi = {
 
   12: {
     ipa:   { 
-      judul: "🔬 IPA", sub: "Ilmu Pengetahuan Alam · Kelas 12",   
+      judul: '<i class="bi bi-brightness-high"></i> IPA', sub: "Ilmu Pengetahuan Alam · Kelas 12",   
       bab: [
         { 
           judul: "Sel Elektrolisis",        
@@ -899,7 +929,7 @@ const materi = {
         ] 
       },
     ips:     { 
-      judul: "🌍 IPS", sub: "Ilmu Pengetahuan Sosial · Kelas 12",  
+      judul: '<i class="bi bi-globe"></i> IPS', sub: "Ilmu Pengetahuan Sosial · Kelas 12",  
       bab: [
         { 
           judul: "Globalisasi", 
@@ -940,7 +970,7 @@ const materi = {
        ] 
       },
     mtk:     { 
-      judul: "📐 Matematika", sub: "Matematika · Kelas 12",
+      judul: '<i class="bi bi-calculator"></i> Matematika', sub: "Matematika · Kelas 12",
       bab: [
         { 
           judul: "Aturan Penjumlahan dan Aturan Perkalian ",          
@@ -985,7 +1015,7 @@ const materi = {
        ] 
      },
     indo:    { 
-      judul: "📝 Bahasa Indonesia", sub: "Bahasa Indonesia · Kelas 12",        
+      judul: '<i class="bi bi-book"></i> Bahasa Indonesia', sub: "Bahasa Indonesia · Kelas 12",        
       bab: [
         { 
           judul: "Teks Artikel ",         
@@ -1030,7 +1060,7 @@ const materi = {
       ] 
     },
     inggris: { 
-      judul: "💬 Bahasa Inggris",  sub: "Bahasa Inggris · Kelas 12",           
+      judul: '<i class="bi bi-translate"></i> Bahasa Inggris', sub: "Bahasa Inggris · Kelas 12",           
       bab: [
         { 
           judul: "Caption Text",         
@@ -1091,7 +1121,7 @@ function showMapel(key, btn) {
   btn.classList.add('active');
 
   const mapel = materi[kelasAktif][key];
-  document.getElementById('judulMapel').textContent = mapel.judul;
+  document.getElementById('judulMapel').innerHTML = mapel.judul;
   document.getElementById('judulKelas').textContent = mapel.sub;
 
   let html = '';
@@ -1103,15 +1133,15 @@ function showMapel(key, btn) {
   // Reset konten ke empty state
   document.getElementById('kontenBab').innerHTML = `
     <div class="empty-state">
-      <span class="empty-emoji">👈</span>
+      <i class="bi bi-journal-text"></i>
       <h3>Pilih bab untuk mulai belajar</h3>
       <p>Klik salah satu bab di sebelah kiri</p>
     </div>
     <div class="tip-grid">
-      <div class="tip-card"><span class="tip-icon">🎯</span><strong>Belajar Fokus</strong><span>Selesaikan satu bab sebelum lanjut ke berikutnya</span></div>
-      <div class="tip-card"><span class="tip-icon">📹</span><strong>Tonton Videonya</strong><span>Video penjelasan tersedia di setiap bab materi</span></div>
-      <div class="tip-card"><span class="tip-icon">✍️</span><strong>Catat Poin Penting</strong><span>Tulis ringkasan agar lebih mudah diingat</span></div>
-      <div class="tip-card"><span class="tip-icon">🏆</span><strong>Kerjakan Quiz</strong><span>Uji pemahaman setelah selesai belajar</span></div>
+      <div class="tip-card"><span class="tip-icon">...</span><strong>Belajar Fokus</strong><span>Selesaikan satu bab sebelum lanjut ke berikutnya</span></div>
+      <div class="tip-card"><span class="tip-icon">...</span><strong>Tonton Videonya</strong><span>Video penjelasan tersedia di setiap bab materi</span></div>
+      <div class="tip-card"><span class="tip-icon">...</span><strong>Catat Poin Penting</strong><span>Tulis ringkasan agar lebih mudah diingat</span></div>
+      <div class="tip-card"><span class="tip-icon">...</span><strong>Kerjakan Quiz</strong><span>Uji pemahaman setelah selesai belajar</span></div>
     </div>
   `;
   document.getElementById('infoBanner').style.display = 'none';
@@ -1134,8 +1164,14 @@ function showBab(key, i, btn) {
       <h5 class="mb-3">${bab.judul}</h5>
       <div class="ratio ratio-16x9 mb-3">
         <iframe src="https://www.youtube.com/embed/${bab.video}" allowfullscreen></iframe>
+        </div>  
+          ${bab.teks}  
+          <div class="text-center">  
+          <a href="quiz.php?mapel=<?php echo $mapel; ?>&kelas=<?php echo $kelas; ?>" 
+        class="btn btn-success w-100">
+        Lanjut Kerjakan Quiz
+      </a>
       </div>
-      ${bab.teks}
     </div>
   `;
 }

@@ -1,5 +1,10 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "learnnova");
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'learnnova';
+
+$conn = mysqli_connect($host, $username, $password, $database);
 
 if (!$conn) {
     die("Koneksi gagal: " . mysqli_connect_error());

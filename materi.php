@@ -10,13 +10,14 @@ if (!isset($_SESSION['user'])) {
 <head>
   <title>Materi</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body style="background:#1E1E2F; color:white;">
 
 <div class="container mt-4">
 
-<h3>📚 Materi Belajar</h3>
+<h3>Materi Belajar</h3>
 
 <div class="row">
 

@@ -5,9 +5,6 @@ include 'koneksi.php';
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
 }
-
-// Ambil data ranking
-$data = mysqli_query($conn, "SELECT * FROM users ORDER BY score DESC");
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +12,7 @@ $data = mysqli_query($conn, "SELECT * FROM users ORDER BY score DESC");
 <head>
   <title>Leaderboard</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <style>
   body {
@@ -44,7 +42,53 @@ $data = mysqli_query($conn, "SELECT * FROM users ORDER BY score DESC");
       color: white;
       border: 1px solid rgba(255,255,255,0.15);
     }
+  .podium{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:20px;
+    margin-bottom:50px;
+    }
+  .rank{
+        width:120px;
+        text-align:center;
+        border-radius:10px 10px 0 0;
+        color:white;
+        padding-top:10px;
+    }
+  .rank1{
+        height:220px;
+        background:#2b59c3;
+    }
+  .rank2{
+        height:170px;
+        background:#5b8def;
+    }
+  .rank3{
+        height:140px;
+        background:#89aef5;
+    }
+.custom-table {
+    width: 100%;
+}
+
+.custom-table th {
+    background-color: #b78edb;
+    color: white;
+    padding: 10px;
+}
+
+.custom-table td {
+    background-color: #ddbbff;
+    color: white;
+    padding: 10px;
+}
+
+.custom-table tr:nth-child(even) td {
+    background-color: #e9d3ff;
+}
 </style>
+
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
@@ -65,35 +109,74 @@ $data = mysqli_query($conn, "SELECT * FROM users ORDER BY score DESC");
 </nav>
 
 <div class="container mt-4">
+    <h3 class="text-center mb-5">Leaderboard</h3>
 
-<h3>🏆 Leaderboard</h3>
+    <?php
+    $data = mysqli_query($conn, "SELECT username, score FROM users ORDER BY score DESC");
 
-<table class="table table-dark table-striped mt-3">
-  <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Username</th>
-      <th>Score</th>
-    </tr>
-  </thead>
+    $leaderboard = [];
+    while($row = mysqli_fetch_assoc($data)){
+        $leaderboard[] = $row;
+    }
+    ?>
 
-  <tbody>
-<?php
-$rank = 1;
-while($d = mysqli_fetch_assoc($data)){
-?>
-<tr>
-  <td><?= $rank++; ?></td>
-  <td><?= $d['username']; ?></td>
-  <td><?= $d['score']; ?></td>
-</tr>
-<?php } ?>
-  </tbody>
-</table>
+    <div class="podium">
 
+        <?php if(isset($leaderboard[1])) { ?>
+        <div class="rank rank2">
+            <h4>2</h4>
+            <p><?= $leaderboard[1]['username']; ?></p>
+            <span><?= $leaderboard[1]['score']; ?></span>
+        </div>
+        <?php } ?>
+
+        <?php if(isset($leaderboard[0])) { ?>
+        <div class="rank rank1">
+            <h3>1</h3>
+            <p><?= $leaderboard[0]['username']; ?></p>
+            <span><?= $leaderboard[0]['score']; ?></span>
+        </div>
+        <?php } ?>
+
+        <?php if(isset($leaderboard[2])) { ?>
+        <div class="rank rank3">
+            <h4>3</h4>
+            <p><?= $leaderboard[2]['username']; ?></p>
+            <span><?= $leaderboard[2]['score']; ?></span>
+        </div>
+        <?php } ?>
+
+    </div>
+
+    <table class="custom-table mt-5">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Username</th>
+            <th>Score</th>
+            <th>Rank</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        $no = 1;
+        $dataTable = mysqli_query($conn, "SELECT username, score FROM users ORDER BY score DESC");
+
+        while($row = mysqli_fetch_assoc($dataTable)){
+        ?>
+        <tr>
+            <td><?= $no ?></td>
+            <td><?= $row['username'] ?></td>
+            <td><?= $row['score'] ?></td>
+            <td><?= $no ?></td>
+        </tr>
+        <?php
+            $no++;
+        }
+        ?>
+    </tbody>
+</table> <br>
 <a href="dashboard.php" class="btn btn-warning">⬅ Kembali</a>
-
 </div>
-
 </body>
 </html>

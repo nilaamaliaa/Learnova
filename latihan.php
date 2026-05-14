@@ -2,6 +2,7 @@
 <html>
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -19,9 +20,9 @@
 <script>
 function cek(j){
 if(j==4){
-document.getElementById('hasil').innerHTML='Benar ✅';
+document.getElementById('hasil').innerHTML='Benar';
 }else{
-document.getElementById('hasil').innerHTML='Salah ❌';
+document.getElementById('hasil').innerHTML='Salah';
 }
 }
 </script>

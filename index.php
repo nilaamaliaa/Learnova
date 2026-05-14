@@ -7,6 +7,7 @@
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <!-- Custom Style -->
   <style>
@@ -59,10 +60,11 @@
 <!-- Hero Section -->
 <div class="hero">
   <div>
-    <h1 class="fw-bold display-4">Belajar Jadi Lebih Seru 🚀</h1>
-    <p class="lead mt-3">
-      Platform bimbel online untuk siswa SMA (Kelas 10–12)
-    </p>
+    <h1>Sistem Pembelajaran Online</h1>
+      <p> Membantu siswa memahami materi pembelajaran sekolah. </p>
+        <p class="lead mt-3">
+          Platform bimbel online untuk siswa SMA (Kelas 10–12)
+        </p>
 
     <div class="mt-4">
       <a href="register.php" class="btn btn-pink btn-lg me-2">Mulai Belajar</a>
