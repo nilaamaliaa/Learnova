@@ -156,19 +156,19 @@ $videoId = $video[$mapel][$bab] ?? '';
 
     /* STATS CARDS */
     .stat-card {
-  border-radius: 14px;
-  padding: 16px 20px;
-  flex: 1;
-  min-width: 120px;
-  text-align: center;
-  color: white;
-  border: none;
-  transition: 0.3s;
-}
+      border-radius: 14px;
+      padding: 16px 20px;
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+      color: white;
+      border: none;
+      transition: 0.3s;
+    }
 
 /* warna beda tiap card */
 .stat-card:nth-child(1) {
-  background: linear-gradient(135deg, #FF4ECD, #C4008F);
+  background: linear-gradient(135deg, #008170, #3ad0bc);
 }
 
 .stat-card:nth-child(2) {
@@ -185,12 +185,6 @@ $videoId = $video[$mapel][$bab] ?? '';
   gap: 20px;          /* jarak antar card */
   margin-bottom: 32px;
   flex-wrap: nowrap;  /* PENTING: biar ga turun ke bawah */
-}
-
-/* hover biar ada feel */
-.stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
     /* BAB LIST */
@@ -305,35 +299,34 @@ $videoId = $video[$mapel][$bab] ?? '';
 
     <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav ms-auto align-items-center gap-3">
-        <li class="nav-item"><a class="nav-link" href="dashboard.php">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="materiLn.php">Materi</a></li>
-        <li class="nav-item"><a class="nav-link" href="quiz.php">Quiz</a></li>
-        <li class="nav-item"><a class="nav-link" href="leaderboard.php">Leaderboard</a></li>
-        <li class="nav-item"><a href="logout.php" class="btn btn-danger ms-2">Logout</a></li>
-      </ul>
+      <li class="nav-item"><a class="nav-link" href="dashboard.php">Home</a></li>
+      <li class="nav-item"><a class="nav-link active" href="materiLn.php">Materi</a></li>
+
+      <!-- DROPDOWN KELAS DI NAVBAR -->
+      <li class="nav-item d-flex align-items-center gap-2">
+        <select class="kelas-select" id="kelasSelect" onchange="gantiKelas(this.value)"
+                style="padding: 4px 30px 4px 10px; font-size: 0.85rem; border-radius: 8px;">
+          <option value="10">Kelas 10</option>
+          <option value="11">Kelas 11</option>
+          <option value="12">Kelas 12</option>
+        </select>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="quiz.php">Quiz</a></li>
+      <li class="nav-item"><a class="nav-link" href="leaderboard.php">Leaderboard</a></li>
+      <li class="nav-item"><a href="logout.php" class="btn btn-danger ms-2">Logout</a></li>
+    </ul>
     </div>
   </div>
 </nav>
 
-<div class="container mt-3">
-
   <!-- HERO -->
-  <div class="hero-section">
+  <div class="hero-section mt-5">
     <h1>Materi Pelajaran</h1>
     <p>Pilih kelas dan mata pelajaran untuk mulai belajar</p>
   </div>
-
-  <!-- DROPDOWN KELAS + STATS -->
-  <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-2">
-    <div class="d-flex align-items-center gap-2">
-      <span style="opacity:0.7; font-size:0.9rem;">Kelas:</span>
-      <select class="kelas-select" id="kelasSelect" onchange="gantiKelas(this.value)">
-        <option value="10">Kelas 10</option>
-        <option value="11">Kelas 11</option>
-        <option value="12">Kelas 12</option>
-      </select>
-    </div>
-    <div class="stats-row mb-0">
+  
+<div class="container mt-5">
+ <div class="stats-row mb-5">
       <div class="stat-card">
         <div class="stat-num">5</div>
         <div class="stat-label">Mata Pelajaran</div>
@@ -342,12 +335,11 @@ $videoId = $video[$mapel][$bab] ?? '';
         <div class="stat-num" id="totalBab">25</div>
         <div class="stat-label">Total Bab</div>
       </div>
-      <div class="stat-card">
-        <div class="stat-num">5</div>
-        <div class="stat-label">Streak Hari</div>
-      </div>
     </div>
   </div>
+
+
+   
 
   <!-- MAPEL BUTTONS (besar, tengah) -->
   <div class="mapel-grid" id="mapelGrid">
