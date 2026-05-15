@@ -25,7 +25,7 @@ $quizData = [
 
                     [
                         'pertanyaan' => 'Planet terbesar di tata surya adalah?',
-                        'opsi' => ['Mars', 'Jupiter', 'Venus'],
+                        'opsi' => ['Mars', 'Jupiter', 'Merkurius'],
                         'jawaban' => 'B'
                     ],
 
