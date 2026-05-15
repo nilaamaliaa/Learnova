@@ -24,27 +24,46 @@ $videoId = $video[$mapel][$bab] ?? '';
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
+    @font-face {
+      font-family: h1;
+      src: url(Poppins-Bold.ttf);
+    }
+    @font-face {
+      font-family: ppi;
+      src: url(Poppins-Italic.ttf);
+    }
+    @font-face {
+      font-family: df;
+      src: url(Poppins-Regular.ttf);
+    }
+
+    span{
+      font-family: ppi;
+    }
+    h1{
+      font-family: h1;
+    }
+    h2{
+      font-family: h1;
+    }
+    p{
+      font-family: ppi;
+    }
+    .navbar-nav{
+      font-family: df;
+    }
     body {
       min-height: 100vh;
       margin: 0;
       padding-top: 55px;
       color: white;
       background-color: #44113E;
-      font-family: Arial, sans-serif;
       background-image:
         radial-gradient(at 10% 10%, #FFF7AD 0%, transparent 50%),
         radial-gradient(at 90% 15%, #FFB3AE 0%, transparent 50%),
         radial-gradient(at 50% 50%, #FF49C1 0%, transparent 60%),
-        radial-gradient(at 20% 80%, #6A1452 0%, transparent 60%),
-        radial-gradient(at 80% 90%, #44113E 0%, transparent 50%);
-      background-attachment: fixed;
+        radial-gradient(at 50% 50%, #3A0519 0%, transparent 60%);
     }
-
-    .navbar {
-      background: rgba(0,0,0,0.3) !important;
-      backdrop-filter: blur(10px);
-    }
-
     .card {
       background: rgba(255,255,255,0.1);
       backdrop-filter: blur(10px);
@@ -266,20 +285,26 @@ $videoId = $video[$mapel][$bab] ?? '';
     .btn-success:hover {
       transform: scale(1.05);
     }
+    .logo{
+      height: 40px;
+      object-fit: contain;
+    } 
   </style>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container mt-1">
-    <a class="navbar-brand fw-bold" href="dashboard.php">Learnnova</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <a href="index.php" class="navbar-brand">
+      <img src="logoLearnnova.png" 
+           alt="Learnova Academy" 
+           class="logo">
+    </a>
+
     <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto align-items-center">
+      <ul class="navbar-nav ms-auto align-items-center gap-3">
         <li class="nav-item"><a class="nav-link" href="dashboard.php">Home</a></li>
         <li class="nav-item"><a class="nav-link active" href="materiLn.php">Materi</a></li>
         <li class="nav-item"><a class="nav-link" href="quiz.php">Quiz</a></li>
