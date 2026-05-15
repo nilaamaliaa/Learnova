@@ -32,6 +32,11 @@
     .btn-pink:hover {
       background-color: #e043b8;
     }
+    .logo{
+      height: 40px;
+      object-fit: contain;
+    }
+    
   </style>
 </head>
 
@@ -40,9 +45,14 @@
 <!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark">
   <div class="container">
-    <span class="navbar-brand">Learnnova Academy</span>
+   <a href="index.php" class="navbar-brand">
+      <img src="logoLearnnova.png" 
+           alt="Learnova Academy" 
+           class="logo">
+    </a>
     <a href="login.php" class="btn btn-warning">Login</a>
   </div>
+  
 </nav>
 
 <!-- Form Register -->
@@ -51,7 +61,7 @@
     <div class="col-md-4">
 
       <div class="card shadow p-4">
-        <h3 class="text-center mb-3 text-dark">Daftar Akun</h3>
+        <h3 class="text-center mb-5 text-dark">DAFTAR AKUN</h3>
 
         <form method="POST" action="proses_register.php">
           <input type="text" name="username" class="form-control mb-3" placeholder="Username" required>
@@ -62,13 +72,20 @@
         </form>
 
         <p class="text-center mt-3 text-dark">
-          Sudah punya akun? <a href="login.php">Login</a>
+          Sudah punya akun? <a href="login.php" style="text-decoration: none; color: #FF49C1;">Login</a>
         </p>
       </div>
 
     </div>
   </div>
 </div>
+
+<br>
+
+<!-- Footer -->
+<footer class="text-center pb-3" style="color: white;">
+  <small>© 2026 Learnnova Academy</small>
+</footer>
 
 </body>
 </html>
