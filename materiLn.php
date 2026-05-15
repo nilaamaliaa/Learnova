@@ -1194,5 +1194,10 @@ function showBab(key, i, btn) {
 }
 </script>
 
+<!-- Footer -->
+<footer class="text-center mt-5">
+  <small>© 2026 Learnnova Academy</small>
+</footer>
+
 </body>
 </html>
