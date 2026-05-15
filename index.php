@@ -41,6 +41,15 @@
     .btn-pink:hover {
       background-color: #e043b8;
     }
+    .logo{
+      height: 40px;
+      object-fit: contain;
+    }
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+    }
   </style>
 </head>
 
@@ -49,28 +58,38 @@
 <!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark shadow">
   <div class="container">
-    <span class="navbar-brand fw-bold">Learnnova Academy</span>
+   <a href="index.php" class="navbar-brand">
+      <img src="logoLearnnova.png" 
+           alt="Learnova Academy" 
+           class="logo">
+    </a>
     <div>
-      <a href="login.php" class="btn btn-warning me-2">Login</a>
       <a href="register.php" class="btn btn-pink">Register</a>
     </div>
   </div>
 </nav>
 
-<!-- Hero Section -->
-<div class="hero">
-  <div>
-    <h1>Sistem Pembelajaran Online</h1>
-      <p> Membantu siswa memahami materi pembelajaran sekolah. </p>
-        <p class="lead mt-3">
-          Platform bimbel online untuk siswa SMA (Kelas 10–12)
-        </p>
 
-    <div class="mt-4">
-      <a href="register.php" class="btn btn-pink btn-lg me-2">Mulai Belajar</a>
-      <a href="login.php" class="btn btn-outline-light btn-lg">Masuk</a>
-    </div>
+
+<!-- Hero Section -->
+<div class="hero container">
+  <div class="row align-items-center w-100">
+
+  <!-- Kolom kiri: teks -->
+  <div class="col-md-6 text-start">
+    <h1 class="fw-bold display-5">Sistem Pembelajaran<br>Online</h1>
+    <p class="mt-3">Membantu siswa memahami materi pembelajaran sekolah.</p>
+    <p class="lead">Platform bimbingan belajar online untuk siswa SMA (Kelas 10–12)</p>
+    <a href="login.php" class="btn btn-pink btn-lg mt-2">Mulai Belajar</a>
   </div>
+
+  <!-- Kolom kanan: gambar -->
+  <div class="col-md-6 text-center">
+    <img src="book3.png" alt="ilustrasi belajar"
+         style="max-height: 80vh; width: auto;">
+  </div>
+
+</div>
 </div>
 
 <!-- Footer -->
