@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,10 +69,10 @@
 <!-- Form Login -->
 <div class="container mt-5">
   <div class="row justify-content-center">
-    <div class="col-md-4">
+    <div class="col-md-auto">
 
       <div class="card shadow p-4">
-        <h3 class="text-center mb-3 text-dark">Login</h3>
+        <h3 class="text-center mb-5 text-dark">LOGIN</h3>
 
         <form method="POST" action="proses_login.php">
           <input type="text" name="username" class="form-control mb-3" placeholder="Username" required>
@@ -78,13 +83,21 @@
         </form>
 
         <p class="text-center mt-3 text-dark">
-          Belum punya ya? <a href="register.php">Daftar</a>
+          Belum punya akun?  <a href="register.php" style="text-decoration: none; color: #FF49C1;">Daftar sekarang</a>
         </p>
       </div>
 
     </div>
   </div>
 </div>
+
+<br>
+
+<!-- Footer -->
+<footer class="text-center pb-3" style="color: white;">
+  <small>© 2026 Learnnova Academy</small>
+</footer>
+
 
 </body>
 </html>
