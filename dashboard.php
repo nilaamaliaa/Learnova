@@ -482,10 +482,10 @@ font-family: df;
 
 </div>
 
-    <!-- COPYRIGHT -->
-    <div class="text-center mt-4">
-      <small> © 2026 Learnnova Academy</small>
-    </div>
+<!-- COPYRIGHT -->
+<div class="text-center mt-4">
+  <small> © 2026 Learnnova Academy</small>
+</div>
 
 </body>
 </html>
